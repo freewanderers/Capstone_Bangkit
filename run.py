@@ -4,6 +4,7 @@ import pickle
 app = Flask(__name__)
 
 input = []
+inputs = []
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index')
@@ -50,7 +51,16 @@ def page2():
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
-    return render_template('result.html')
+    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+        # user_input = request.form.get('MTK')
+        # print(user_input, type(user_input))
+        # user_input = float(user_input)
+    print("inputted list:")
+    print(input)
+    inputs = [float(i) for i in input]
+    result = model.predict([inputs])
+    print(result)
+    return render_template('result.html', result=result)
 
 if __name__ == '__main__':
     input.clear()
