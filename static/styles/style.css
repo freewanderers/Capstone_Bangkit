@@ -1,11 +1,9 @@
-.logo
-{
+.logo {
     display: flex;
     justify-content: center;
 }
 
-.reg-box
-{
+.reg-box {
     width: 500px;
     height: 600px;
     padding: 20px;
@@ -16,59 +14,45 @@
     color: #D99879;
 }
 
-.start-button
-{
+.start-button {
     padding: 200px;
 }
 
-.button
-{
+.button {
     width: 100px;
     height: 40px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    border-color: #D99879;    
+    border-color: #D99879;
     font-size: 15px;
     color: #87460A;
 }
 
-form
-{
+form {
     margin-left: 100px;
 }
 
-h2
-{
+h2 {
     margin-top: 50px;
     text-align: center;
     color: black;
 }
 
-
-h3
-{
+h3 {
     text-align: center;
     color: black;
     margin-top: 15px;
 }
 
-input[type=text]
-{
+input[type=text] {
     width: 50px;
     height: 20px;
     border-radius: 10px;
     border-color: #D99879;
-    border-inline-color: #D99879;    
+    border-inline-color: #D99879;
 }
 
-.next
-{
-    margin-top: 20px;
-    margin-left: 400px;
-}
-
-.result-box
-{
+.result-box {
     width: 320px;
     height: 40px;
     background-color: #FFFFFF;
@@ -81,8 +65,7 @@ input[type=text]
     text-align: center;
 }
 
-.text-box
-{
+.text-box {
     top: 6px;
     position: relative;
 }

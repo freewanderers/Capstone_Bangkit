@@ -15,15 +15,26 @@
             <h1>BAKAT</h1>
         </div>
         <h3>Masukkan nilai yang anda peroleh</h3>
-        <form action="POST">
-            <br><br> Bahasa Indonesia <br><input type="text" name="" id=""><br><br> Bahasa Inggris <br><input type="text" name="" id=""><br><br> Matematika <br><input type="text" name="" id=""><br><br> Kimia <br><input type="text" name="" id=""><br><br>            Fisika <br><input type="text" name="" id=""><br><br>
+        <form action="{{ url_for('page2') }}" method='POST'>
+            <br><br> Bahasa Indonesia <br>
+            <input type="text" name="Ind" id="">
+            <br><br> Bahasa Inggris <br>
+            <input type="text" name="Ing" id="">
+            <br><br> Matematika <br>
+            <input type="text" name="Mat" id="">
+            <br><br> Kimia <br>
+            <input type="text" name="Kim" id="">
+            <br><br>Fisika <br>
+            <input type="text" name="Fis" id="">
+            <br><br>
+            <!-- <input type="submit" value="Submit"> -->
+            <input type="image" src="/static/next.png" width="55px" style="margin-left: 300px;">
         </form>
-        <div class="next">
+        <!-- <div class="next">
             <a href="{{ url_for('page2') }}">
                 <img src="/static/next.png" width="55px">
             </a>
-            <p>halo</p>
-        </div>
+        </div> -->
     </div>
     </div>
 </body>

@@ -15,15 +15,23 @@
             <h1>BAKAT</h1>
         </div>
         <h3>Masukkan nilai yang anda peroleh</h3>
-        <form action="POST">
-            <br><br> Biologi <br><input type="text" name="" id=""><br><br> Ekonomi <br><input type="text" name="" id=""><br><br> Geografi <br><input type="text" name="" id=""><br><br> Sosiologi <br><input type="text" name="" id=""><br><br>
-
+        <form action="{{ url_for('result') }}" method="POST">
+            <br><br> Biologi <br>
+            <input type="text" name="Bio" id="">
+            <br><br> Ekonomi <br>
+            <input type="text" name="Eko" id="">
+            <br><br> Geografi <br>
+            <input type="text" name="Geo" id="">
+            <br><br> Sosiologi
+            <br><input type="text" name="Sos" id="">
+            <br><br>
+            <input type="image" src="/static/next.png" width="55px" style="margin-left: 300px;">
         </form>
-        <div class="next">
+        <!-- <div class="next">
             <a href="{{ url_for('result') }}">
                 <img src="/static/next.png" width="55px">
             </a>
-        </div>
+        </div> -->
     </div>
     </div>
 </body>

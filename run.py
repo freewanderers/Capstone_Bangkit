@@ -3,10 +3,12 @@ import pickle
 
 app = Flask(__name__)
 
+input = []
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index')
 def home():
-    return render_template('html/home.html')
+    return render_template('home.html')
 
     # if request.method == 'POST':
         # model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
@@ -19,13 +21,31 @@ def home():
 @app.route('/page1', methods=['GET', 'POST'])
 def page1():
     if request.method == 'POST':
-        print('Done')
+        ind = request.form.get("Ind")
+        ing = request.form.get("Ing")
+        mat = request.form.get("Mat")
+        kim = request.form.get("Kim")
+        fis = request.form.get("Fis")
+        input.append(ind)
+        input.append(ing)
+        input.append(mat)
+        input.append(kim)
+        input.append(fis)
+        print(input)
     return render_template('page1.html')
 
 @app.route('/page2', methods=['GET', 'POST'])
 def page2():
     if request.method == 'POST':
-        print("done")
+        bio = request.form.get("Bio")
+        eko = request.form.get("Eko")
+        geo = request.form.get("Geo")
+        sos = request.form.get("Sos")
+        input.append(bio)
+        input.append(eko)
+        input.append(geo)
+        input.append(sos)
+        print(input)
     return render_template('page2.html')
 
 @app.route('/result', methods=['GET', 'POST'])
@@ -33,4 +53,5 @@ def result():
     return render_template('result.html')
 
 if __name__ == '__main__':
+    input.clear()
     app.run(debug=True)
