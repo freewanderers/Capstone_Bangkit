@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <title>Bakat</title>
+</head>
+
+<body>
+    <div class="reg-box">
+        <div class="logo">
+            <h1>BAKAT</h1>
+        </div>
+        <h3>Masukkan nilai yang anda peroleh</h3>
+        <form action="POST">
+            <br><br> Bahasa Indonesia <br><input type="text" name="" id=""><br><br> Bahasa Inggris <br><input type="text" name="" id=""><br><br> Matematika <br><input type="text" name="" id=""><br><br> Kimia <br><input type="text" name="" id=""><br><br>            Fisika <br><input type="text" name="" id=""><br><br>
+        </form>
+        <div class="next">
+            <a href="{{ url_for('page2') }}">
+                <img src="/static/next.png" width="55px">
+            </a>
+            <p>halo</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
