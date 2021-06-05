@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ResultFragment"
+    android:background="@color/customcolor2">
+
+    <TextView
+        android:id="@+id/bakat"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="168dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/bakat"
+        android:textAppearance="@style/bakat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/string_form"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="156dp"
+        android:text="@string/heres_s_the_result"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bakat"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/bakat"
+        app:layout_constraintTop_toBottomOf="@+id/bakat" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/string_form"
+        android:layout_width="320dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/berdasarkan_nilai_yang_telah_anda_isi_sebelumnya_maka_jurusan_yang_sesuai_adalah"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txResult"
+        style="@style/shape3"
+        android:layout_width="205dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="@string/txResult"
+        android:textAlignment="center"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

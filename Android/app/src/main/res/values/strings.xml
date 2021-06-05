@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BAKAT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username"><b>Username</b></string>
+    <string name="password"><b>Password</b></string>
+    <string name="bakat"><b>BAKAT</b></string>
+    <string name="email"><b>Email</b></string>
+    <string name="i_agree_to_"><b>I agree to the terms and conditions</b></string>
+    <string name="matematika"><b>Matematika</b></string>
+    <string name="fisika"><b>Fisika</b></string>
+    <string name="kimia"><b>Kimia</b></string>
+    <string name="biologi"><b>Biologi</b></string>
+    <string name="bahasa_indo"><b>Bahasa Indonesia</b></string>
+    <string name="bahasa_inggris"><b>Bahasa Inggris</b></string>
+    <string name="pkn"><b>Pendidikan Kewarganegaraan</b></string>
+    <string name="kesenian"><b>Kesenian</b></string>
+    <string name="matematika2"><b>Matematika</b></string>
+    <string name="ekonomi"><b>Ekonomi</b></string>
+    <string name="Sosiologi"><b>Sosiologi</b></string>
+    <string name="geografi"><b>Geografi</b></string>
+    <string name="txResult"><b>Hasil</b></string>
+    <string name="berdasarkan_nilai_yang_telah_anda_isi_sebelumnya_maka_jurusan_yang_sesuai_adalah"><b>Berdasarkan nilai yang telah anda isi sebelumnya, maka jurusan yang sesuai adalah</b></string>
+    <string name="submit"><b>Submit</b></string>
+    <string name="next">NEXT</string>
+    <string name="clear">Clear</string>
+    <string name="masukkan_nilai_yang_anda_peroleh"><b>Masukkan nilai yang anda peroleh</b></string>
+    <string name="apa_jurusan_anda_saat_di_sma"><b>Apa jurusan anda saat di SMA?</b></string>
+    <string name="heres_s_the_result"><b>Heres’s the Result</b></string>
+    <string name="caption">Tekan tombol di bawah ini untuk menemukan BAKAT Anda,</string>
+    <string name="caption2">dan semua anda mendapatkan yang terbaik :)</string>
+</resources>

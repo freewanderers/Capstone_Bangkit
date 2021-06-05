@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StartFragment"
+    android:background="@color/customcolor2">
+
+    <TextView
+        android:id="@+id/bakat"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="168dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/bakat"
+        android:textAppearance="@style/bakat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/shape1"
+        android:layout_marginTop="44dp"
+        android:text="Start"
+        android:textColor="#272626"
+        app:backgroundTint="#E6A371"
+        app:layout_constraintEnd_toEndOf="@+id/bakat"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/bakat"
+        app:layout_constraintTop_toBottomOf="@+id/caption2" />
+
+    <TextView
+        android:id="@+id/caption"
+        style="@style/string_form"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="168dp"
+        android:text="@string/caption"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/bakat"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/bakat"
+        app:layout_constraintTop_toBottomOf="@+id/bakat" />
+
+    <TextView
+        android:id="@+id/caption2"
+        style="@style/string_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/caption2"
+        app:layout_constraintEnd_toEndOf="@+id/caption"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/caption"
+        app:layout_constraintTop_toBottomOf="@+id/caption" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

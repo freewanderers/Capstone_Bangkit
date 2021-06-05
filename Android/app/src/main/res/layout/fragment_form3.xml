@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Form3Fragment"
+    android:background="@color/customcolor2">
+
+    <TextView
+        android:id="@+id/bakat"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="168dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/bakat"
+        android:textAppearance="@style/bakat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/masukkan_nilai_yang_anda_peroleh"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bakat"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/bakat"
+        app:layout_constraintTop_toBottomOf="@+id/bakat" />
+
+    <TextView
+        android:id="@+id/ekonomi"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/ekonomi"
+        android:textAppearance="@style/string_form"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/input_ekonomi"
+        style="@style/shape2"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ekonomi"
+        app:layout_constraintTop_toBottomOf="@+id/ekonomi" />
+
+    <TextView
+        android:id="@+id/sosiologi"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/Sosiologi"
+        android:textAppearance="@style/string_form"
+        app:layout_constraintEnd_toEndOf="@+id/ekonomi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ekonomi"
+        app:layout_constraintTop_toBottomOf="@+id/ekonomi" />
+
+    <EditText
+        android:id="@+id/input_sosiologi"
+        style="@style/shape2"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/sosiologi"
+        app:layout_constraintTop_toBottomOf="@+id/sosiologi" />
+
+    <TextView
+        android:id="@+id/geografi"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/geografi"
+        android:textAppearance="@style/string_form"
+        app:layout_constraintEnd_toEndOf="@+id/sosiologi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sosiologi"
+        app:layout_constraintTop_toBottomOf="@+id/sosiologi" />
+
+    <EditText
+        android:id="@+id/input_geografi"
+        style="@style/shape2"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/geografi"
+        app:layout_constraintTop_toBottomOf="@+id/geografi" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="32dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="516dp"
+        android:background="@color/transparant"
+        android:contentDescription="@string/next"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintStart_toEndOf="@+id/input_geografi"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

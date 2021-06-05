@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".KategoriFragment"
+    android:background="@color/customcolor2">
+
+    <TextView
+        android:id="@+id/bakat"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="168dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/bakat"
+        android:textAppearance="@style/bakat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/apa_jurusan"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/apa_jurusan_anda_saat_di_sma"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ipa"
+        app:layout_constraintEnd_toEndOf="@+id/bakat"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/bakat"
+        app:layout_constraintTop_toBottomOf="@+id/bakat"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/btn_ipa"
+        style="@style/shape1"
+        android:layout_marginTop="148dp"
+        android:text="IPA"
+        android:textColor="#272626"
+        app:backgroundTint="#E6A371"
+        app:layout_constraintEnd_toEndOf="@+id/apa_jurusan"
+        app:layout_constraintStart_toStartOf="@+id/apa_jurusan"
+        app:layout_constraintTop_toBottomOf="@+id/bakat" />
+
+    <Button
+        android:id="@+id/btn_ips"
+        style="@style/shape1"
+        android:layout_marginTop="208dp"
+        android:text="IPS"
+        android:textColor="#272626"
+        app:backgroundTint="#E6A371"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ipa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_ipa"
+        app:layout_constraintTop_toBottomOf="@+id/bakat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
