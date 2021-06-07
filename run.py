@@ -13,18 +13,26 @@ def home():
     input.clear()
     return render_template('home.html')
 
+    # if request.method == 'POST':
+        # model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+        # user_input = request.form.get('MTK')
+        # print(user_input, type(user_input))
+        # user_input = float(user_input)
+        # prediction = model.predict([[user_input]])
+        # print(prediction)
+
 @app.route('/page1', methods=['GET', 'POST'])
 def page1():
     if request.method == 'POST':
         ind = request.form.get("Ind")
-        input.append(ind)
         ing = request.form.get("Ing")
-        input.append(ing)
         mat = request.form.get("Mat")
-        input.append(mat)
         kim = request.form.get("Kim")
-        input.append(kim)
         fis = request.form.get("Fis")
+        input.append(ind)
+        input.append(ing)
+        input.append(mat)
+        input.append(kim)
         input.append(fis)
         print(input)
     return render_template('page1.html')
@@ -33,12 +41,12 @@ def page1():
 def page2():
     if request.method == 'POST':
         bio = request.form.get("Bio")
-        input.append(bio)
         eko = request.form.get("Eko")
-        input.append(eko)
         geo = request.form.get("Geo")
-        input.append(geo)
         sos = request.form.get("Sos")
+        input.append(bio)
+        input.append(eko)
+        input.append(geo)
         input.append(sos)
         print(input)
     return render_template('page2.html')
@@ -46,18 +54,20 @@ def page2():
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+        # user_input = request.form.get('MTK')
+        # print(user_input, type(user_input))
+        # user_input = float(user_input)
     print("inputted list:")
     print(input)
-    try:
-        inputs = [float(i) for i in input]
-        result = model.predict([inputs])
-    except Exception as e:
-        return e
+    inputs = [float(i) for i in input]
+    result = model.predict([inputs])
     print("inputs were")
     print(inputs)
+    inputs.clear()
+    input.clear()
     print(result)
+
     return render_template('result.html', result=result)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
-    # app.run(debug=True)
