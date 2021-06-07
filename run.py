@@ -9,6 +9,8 @@ inputs = []
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index')
 def home():
+    inputs.clear()
+    input.clear()
     return render_template('home.html')
 
     # if request.method == 'POST':
@@ -59,9 +61,10 @@ def result():
     print(input)
     inputs = [float(i) for i in input]
     result = model.predict([inputs])
+    print("inputs were")
+    print(inputs)
     print(result)
     return render_template('result.html', result=result)
 
 if __name__ == '__main__':
-    input.clear()
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
