@@ -27,6 +27,7 @@
     <string name="masukkan_nilai_yang_anda_peroleh"><b>Masukkan nilai yang anda peroleh</b></string>
     <string name="apa_jurusan_anda_saat_di_sma"><b>Apa jurusan anda saat di SMA?</b></string>
     <string name="heres_s_the_result"><b>Heres’s the Result</b></string>
-    <string name="caption">Tekan tombol di bawah ini untuk menemukan BAKAT Anda,</string>
-    <string name="caption2">dan semua anda mendapatkan yang terbaik :)</string>
+    <string name="caption">Tekan tombol di bawah ini untuk menemukan JURUSAN sesuai</string>
+    <string name="caption2">NILAI Anda,</string>
+    <string name="caption3">dan semoga anda mendapatkan yang terbaik :)</string>
 </resources>
