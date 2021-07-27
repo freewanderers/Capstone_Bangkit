@@ -69,3 +69,16 @@ input[type=text] {
     top: 6px;
     position: relative;
 }
+
+.result-box2 {
+    width: 320px;
+    height: 55px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-color: #D99879;
+    font-size: 20px;
+    color: #87460A;
+    margin-left: 90px;
+    margin-top: 50px;
+    text-align: center;
+}

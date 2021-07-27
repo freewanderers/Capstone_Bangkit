@@ -15,19 +15,13 @@
             <h1>BAKAT</h1>
         </div><br>
         <div class="result">
-            <h2>Here is the Result</h2>
-            <h3>Berdasarkan nilai yang telah anda isi sebelumnya,</h3>
-            <h3>maka jurusan yang sesuai adalah</h3>
+            <h2>Jurusan yang sesuai:</h2>
+            <h3>{{ result }}</h3>
         </div>
-        <div class="result-box">
+        <div class="result-box2">
             <div class="text-box">
-                <h4>{{ result }}</h4>
+                <h3>Daftar Universitas yang kompeten pada jurusan {{ result }}:</h3>
             </div>
-            <br>
-            <a href="{{ url_for('api') }}">
-                <button class="button">Find out more</button>
-            </a>
-            <br><br>
             <a href="{{ url_for('page1') }}">
                 <button class="button">Try More</button>
             </a>

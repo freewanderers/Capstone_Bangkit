@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import pickle
+import json
 
 app = Flask(__name__)
 
@@ -50,15 +51,55 @@ def result():
     model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
     print("inputted list:")
     print(input)
+    blacklist = "[']"
     try:
         inputs = [float(i) for i in input]
-        result = model.predict([inputs])
+        results = model.predict([inputs])
     except Exception as e:
         return e
     print("inputs were")
     print(inputs)
-    print(result)
+    # print(type(results))
+    result2 = results.tobytes()
+    # print(type(result2))
+    result = result2.decode('utf8')
+    # result.replace(blacklist, '')
     return render_template('result.html', result=result)
+
+@app.route('/result2', methods=['GET', 'POST'])
+def result2():
+    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+    blacklist = "[']"
+    try:
+        inputs = [float(i) for i in input]
+        results = model.predict([inputs])
+    except Exception as e:
+        return e
+    print(inputs)
+    result2 = results.tostring()
+    print(type(result2))
+    result = result2.decode('utf8')
+    return render_template('result2.html', result=result)
+
+@app.route('/api', methods=['GET', 'POST'])
+def api():
+    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+    blacklist = "[']"
+    try:
+        inputs = [float(i) for i in input]
+        results = model.predict([inputs])
+    except Exception as e:
+        return e
+    print(inputs)
+    result2 = results.tostring()
+    print(type(result2))
+    result = result2.decode('utf8')
+    print(result)
+    print(type(result))
+    output = result.replace('   ','')
+    print(output)
+    print(type(output))
+    return jsonify({'result':output})
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', debug=True)
