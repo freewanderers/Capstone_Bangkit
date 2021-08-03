@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import pickle
 import json
+import re
 
 app = Flask(__name__)
 
@@ -48,7 +49,7 @@ def page2():
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
-    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+    model = pickle.load(open('./Machine Learning/finalized_model2.sav', 'rb'))
     print("inputted list:")
     print(input)
     blacklist = "[']"
@@ -68,7 +69,7 @@ def result():
 
 @app.route('/result2', methods=['GET', 'POST'])
 def result2():
-    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
+    model = pickle.load(open('./Machine Learning/finalized_model2.sav', 'rb'))
     blacklist = "[']"
     try:
         inputs = [float(i) for i in input]
@@ -83,8 +84,8 @@ def result2():
 
 @app.route('/api', methods=['GET', 'POST'])
 def api():
-    model = pickle.load(open('./Machine Learning/finalized_model.sav', 'rb'))
-    blacklist = "[']"
+    model = pickle.load(open('./Machine Learning/finalized_model2.sav', 'rb'))
+    my_dict = {}
     try:
         inputs = [float(i) for i in input]
         results = model.predict([inputs])
@@ -95,11 +96,16 @@ def api():
     print(type(result2))
     result = result2.decode('utf8')
     print(result)
-    print(type(result))
-    output = result.replace('   ','')
-    print(output)
-    print(type(output))
-    return jsonify({'result':output})
+    # final = result.replace(" ","")
+    final = re.sub(u'\u0000', "", result)
+    print(final)
+    print(type(final))
+    my_dict['jurusan'] = final
+
+    if final == 'Komunikasi':
+        my_dict['Universitas'] = ""
+    print(type(my_dict))
+    return jsonify(my_dict)
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', debug=True)
