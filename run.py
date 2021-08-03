@@ -102,8 +102,16 @@ def api():
     print(type(final))
     my_dict['jurusan'] = final
 
-    if final == 'Komunikasi':
-        my_dict['Universitas'] = ""
+    if final == "Komunikasi":
+        my_dict['Universitas'] = ["Universitas Telkom", "Universitas Gadjah Mada", "Universitas Indonesia", "Universitas Airlangga", "Universitas Negeri Yogyakarta"]
+    elif final == "Akuntansi":
+        my_dict['Universitas'] = ["Universitas Diponegoro", "Universitas Udayana", "Universitas Indonesia", "Universitas Sebelas Maret", "Universitas Gadjah Mada"]
+    elif final == "Hukum":
+        my_dict['Universitas'] = ["Universitas Indonesia", "Universitas Brawijaya", "Universitas Diponegoro", "Universitas Gadjah Mada", "Universitas Padjajaran"]
+    elif final == "Teknik Informatika / Ilmu Komputer":
+        my_dict['Universitas'] = ["Institut Teknologi Bandung", "Institut Teknologi Sepuluh Nopember", "Universitas Telkom", "Universitas Bina Nusantara", "Universitas Udayana"]
+    elif final == "Kedokteran Umum":
+        my_dict['Universitas'] = ["Universitas Indonesia", "Universitas Gadjah Mada", "Universitas Airlangga", "Universitas Padjajaran", "Universitas Brawijaya"]
     print(type(my_dict))
     return jsonify(my_dict)
 
