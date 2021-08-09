@@ -1,10 +1,13 @@
 package com.clairvoyance.bangkit
 
+import android.opengl.EGL14
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import okhttp3.*
+import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +38,22 @@ class ResultFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_result, container, false)
+    }
+// Send request via OkHttp module to API
+    fun getData() {
+        val request = Request.Builder().url("http://127.0.0.1:5000/api").build()
+
+        val client = OkHttpClient()
+        client.newCall(request).enqueue(object: Callback{
+            override fun onFailure(call: Call, e: IOException) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 
     companion object {

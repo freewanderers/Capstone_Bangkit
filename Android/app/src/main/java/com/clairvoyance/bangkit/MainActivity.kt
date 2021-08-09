@@ -23,5 +23,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+// Put user input on Form1-3 to variable
 }
