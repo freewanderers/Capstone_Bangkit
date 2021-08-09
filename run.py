@@ -95,7 +95,27 @@ def api():
     # Declare empty dict
     my_dict = {}
 
+    if request.method == "GET":
+        ind = request.args.get("Ind")
+        input.append(ind)
+        ing = request.args.get("Ing")
+        input.append(ing)
+        mat = request.args.get("Mat")
+        input.append(mat)
+        kim = request.args.get("Kim")
+        input.append(kim)
+        fis = request.args.get("Fis")
+        input.append(fis)
+        bio = request.args.get("Bio")
+        input.append(bio)
+        eko = request.args.get("Eko")
+        input.append(eko)
+        geo = request.args.get("Geo")
+        input.append(geo)
+        sos = request.args.get("Sos")
+        input.append(sos)
 
+    print(input)
     try:
         inputs = [float(i) for i in input]
         results = model.predict([inputs])
