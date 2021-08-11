@@ -90,11 +90,13 @@ def result():
 @app.route('/api', methods=['GET', 'POST'])
 def api():
     # Load machine learning model
+    # '''
     model = pickle.load(open('./Machine Learning/finalized_model2.sav', 'rb'))
     
     # Declare empty dict
     my_dict = {}
 
+    # if request.method == "POST":
     if request.method == "GET":
         ind = request.args.get("Ind")
         input.append(ind)
@@ -158,10 +160,10 @@ def api():
         my_dict['Universitas'] = ["Institut Teknologi Bandung", "Institut Teknologi Sepuluh Nopember", "Universitas Telkom", "Universitas Bina Nusantara", "Universitas Udayana"]
     elif final == "Kedokteran Umum":
         my_dict['Universitas'] = ["Universitas Indonesia", "Universitas Gadjah Mada", "Universitas Airlangga", "Universitas Padjajaran", "Universitas Brawijaya"]
-    
+    # '''
     # Return dict into json type
     return jsonify(my_dict)
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', debug=True)
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
+    # app.run(debug=True)

@@ -4,11 +4,11 @@ import java.lang.NullPointerException
 
 class Placeholder {
 //Take the variable from incoming api result
-    var MataKuliah: string? = null
+    var MataKuliah: String? = null
     var Univ: List<Blog>? = null
 
     class Blog {
         var univ_id: Int? = null
-        var Universitas: string? = null
+        var Universitas: String? = null
     }
 }
