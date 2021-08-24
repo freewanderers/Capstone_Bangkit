@@ -91,10 +91,15 @@ def result():
 def api():
     # Load machine learning model
     # '''
+    input = []
+    inputs = []
     model = pickle.load(open('./Machine Learning/finalized_model2.sav', 'rb'))
     
     # Declare empty dict
     my_dict = {}
+
+    input.clear()
+    inputs.clear()
 
     # if request.method == "POST":
     if request.method == "GET":

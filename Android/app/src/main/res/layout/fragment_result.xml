@@ -53,12 +53,13 @@
         style="@style/shape3"
         android:layout_width="205dp"
         android:layout_height="55dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="@string/txResult"
         android:textAlignment="center"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
