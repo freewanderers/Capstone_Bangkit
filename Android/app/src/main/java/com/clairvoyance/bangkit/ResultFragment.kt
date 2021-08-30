@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.gson.GsonBuilder
+import kotlinx.android.synthetic.main.fragment_result.*
 import okhttp3.*
 import java.io.IOException
 
@@ -25,7 +26,9 @@ class ResultFragment : Fragment() {
     }
 // Send request via OkHttp module to API
     fun getData() {
-        val request = Request.Builder().url("http://127.0.0.1:5000/api").build()
+        val request = Request.Builder()
+            .url("https://capstone-bakat.et.r.appspot.com/api?Ind=80&Ing=77&Mat=80&Kim=0&Fis=0&Bio=0&Eko=66&Geo=77&Sos=89")
+            .build()
 
         val client = OkHttpClient()
         client.newCall(request).enqueue(object: Callback{
@@ -37,7 +40,7 @@ class ResultFragment : Fragment() {
                 val body = response.body?.string()
                 var gson = GsonBuilder().create()
                 var result = gson.fromJson(body, Placeholder::class.java)
-                Log.e("eee", result?.Univ?.get(0)?.Universitas.toString())
+                txResult.text = result?.jurusan.toString()
 
             }
 

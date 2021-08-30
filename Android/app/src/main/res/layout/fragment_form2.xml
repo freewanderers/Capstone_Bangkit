@@ -25,6 +25,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="32dp"
         android:text="@string/masukkan_nilai_yang_anda_peroleh"
+        android:textColor="#87460A"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +53,7 @@
         android:inputType="numberDecimal"
         android:maxLength="5"
         android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bahasa_indo" />
@@ -77,6 +79,7 @@
         android:inputType="numberDecimal"
         android:maxLength="5"
         android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bahasa_inggris" />
@@ -103,6 +106,7 @@
         android:inputType="numberDecimal"
         android:maxLength="5"
         android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/matematika" />
