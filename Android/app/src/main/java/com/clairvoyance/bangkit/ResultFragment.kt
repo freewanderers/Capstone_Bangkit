@@ -140,6 +140,20 @@ class ResultFragment : Fragment() {
                     var gson = GsonBuilder().create()
                     var result = gson.fromJson(body, Placeholder::class.java)
                     txResult.text = result?.jurusan.toString()
+
+                    activity!!.runOnUiThread(Runnable {
+                        var result2 = gson.fromJson(body, Placeholder::class.java)
+                        txResult2.text = result2?.Universitas?.get(0).toString()
+                        txResult3.text = result2?.Universitas?.get(1).toString()
+                        txResult4.text = result2?.Universitas?.get(2).toString()
+                        txResult5.text = result2?.Universitas?.get(3).toString()
+                        txResult6.text = result2?.Universitas?.get(4).toString()
+                    })
+
+
+//                    var res =  gson.fromJson(body, Placeholder::class.java)
+//                    Log.e("eee", res.Universitas.get(0).toString())
+
                 }
             })
         })
