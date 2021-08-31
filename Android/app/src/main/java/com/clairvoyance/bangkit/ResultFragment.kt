@@ -1,6 +1,7 @@
 package com.clairvoyance.bangkit
 
 import android.opengl.EGL14
+import android.opengl.GLES30
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -26,6 +27,8 @@ class ResultFragment : Fragment() {
     }
 // Send request via OkHttp module to API
     fun getData() {
+        val url = ""
+
         val request = Request.Builder()
             .url("https://capstone-bakat.et.r.appspot.com/api?Ind=80&Ing=77&Mat=80&Kim=0&Fis=0&Bio=0&Eko=66&Geo=77&Sos=89")
             .build()
