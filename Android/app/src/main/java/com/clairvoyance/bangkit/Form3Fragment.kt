@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.clairvoyance.bangkit.databinding.FragmentForm3Binding
 import kotlinx.android.synthetic.main.fragment_form3.*
+import java.lang.Exception
 
 
 class Form3Fragment : Fragment() {
@@ -27,17 +29,26 @@ class Form3Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNext.setOnClickListener{
-            val Eko = input_ekonomi.text.toString().toInt()
-            val Sos = input_sosiologi.text.toString().toInt()
-            val Geo = input_geografi.text.toString().toInt()
+        lateinit var viewModel: MyObservable
+
+        var Eko = 0
+        var Sos = 0
+        var Geo = 0
+        binding.btnNext.setOnClickListener {
+            Eko = input_ekonomi.text.toString().toInt()
+            Sos = input_sosiologi.text.toString().toInt()
+            Geo = input_geografi.text.toString().toInt()
+
+            viewModel = activity?.run {
+                ViewModelProviders.of(this).get(MyObservable::class.java)
+            }?: throw Exception("Invalid Activity")
+
+            viewModel.ekonomi.value = Eko
+            viewModel.sosiologi.value = Sos
+            viewModel.geografi.value = Geo
+
             view.findNavController().navigate(R.id.form2Fragment)
         }
-
-
-//        binding.btnNext.setOnClickListener(
-//                Navigation.createNavigateOnClickListener(R.id.action_form3Fragment_to_form2Fragment)
-//        )
 
     }
 
